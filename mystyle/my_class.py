@@ -113,20 +113,46 @@ def hit_or_stand(deck, hand):
 
 
 def player_busts(player, dealer, chips):
-    pass
+    print('Bust Player !')
+    chips.lose_bet()
 
 
 def player_wins(player, dealer, chips):
-    pass
+    print('Player wins')
+    chips.win_bet()
 
 
 def dealer_busts(player, dealer, chips):
-    pass
+    print('Player Wins ! Dealers Busted')
+    chips.win_bet()
 
 
 def dealer_wins(player, dealer, chips):
-    pass
+    print('Dealer wins')
+    chips.lose_bet()
 
 
-def push():
-    pass
+def push(player, dealer):
+    print('Dealer and player tie! Push')
+
+
+def show_some(player, dealer):
+    print('Dealers Hand: ')
+    print('one Hidden card !')
+    print(dealer.cards[1])
+    print('\n')
+    print('Players Hand: ')
+    for card in player.cards:
+        print(card)
+
+
+def show_all(player, dealer):
+
+    print('Dealer Hand: ')
+    for card in dealer.cards:
+        print(card)
+
+    print('\n')
+    print('Players Hand')
+    for card in player.cards:
+        print(card)
