@@ -1,13 +1,20 @@
 from mystyle.my_class import *
 
 if __name__ == '__main__':
-    test_deck = Deck()
-    test_deck.shuffle()
 
-    test_player = Hand()
-    pulled_card = test_deck.deal()
-    print(pulled_card)
+    print('Welcome to Black Jack')
 
-    test_player.add_card(pulled_card)
-    print(test_player.value)
+    deck = Deck()
+    deck.shuffle()
+
+    player_hand = Hand()
+    player_hand.add_card(deck.deal())
+    player_hand.add_card(deck.deal())
+
+    dealer_hand = Hand()
+    dealer_hand.add_card(deck.deal())
+    dealer_hand.add_card(deck.deal())
+
+    player_chips = Chips
+
 
